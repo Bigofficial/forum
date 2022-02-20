@@ -11,12 +11,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script>
     function send() {
+        //三个参数，路径，js对象，回调函数（服务器给浏览器响应，他会调这个方法，data就是服务器传的数据）.
         $.post(
-            "/alpha/ajax",
+            "/community/alpha/ajax",
             {"name": "张三", "age": 23},
             function (data) {
                 console.log(typeof (data));
                 console.log(data);
+                //转成js对象
                 data = $.parseJSON(data);
                 console.log(typeof (data));
                 console.log(data.code);

@@ -1,16 +1,14 @@
-package com.rt.newcoder;
+package com.rt.nowcoder;
 
-import com.rt.newcoder.dao.DiscussPostMapper;
-import com.rt.newcoder.dao.UserMapper;
-import com.rt.newcoder.entity.DiscussPost;
-import com.rt.newcoder.entity.User;
-import org.apache.catalina.core.ApplicationContext;
+import com.rt.nowcoder.dao.DiscussPostMapper;
+import com.rt.nowcoder.dao.UserMapper;
+import com.rt.nowcoder.entity.DiscussPost;
+import com.rt.nowcoder.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 import java.util.logging.SimpleFormatter;
@@ -52,7 +50,9 @@ class NewcoderApplicationTests implements ApplicationContextAware {
 
     @Test
     public void testSelectUser(){
-        User user = userMapper.selectById(1);
+        User user = userMapper.selectByName("liubei");
         System.out.println(user);
     }
+
+
 }

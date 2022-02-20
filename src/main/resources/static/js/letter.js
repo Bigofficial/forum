@@ -4,6 +4,7 @@ $(function(){
 });
 
 function send_letter() {
+    //
 	$("#sendModal").modal("hide");
 
     var toName = $("#recipient-name").val();
@@ -12,6 +13,7 @@ function send_letter() {
         CONTEXT_PATH + "/letter/send",
         {"toName": toName, "content": content},
         function (data) {
+            //转化为js对象
             data = $.parseJSON(data);
             if (data.code == 0) {
                 $("#hintBody").text("发送成功！");
@@ -19,9 +21,11 @@ function send_letter() {
                 $("#hintBody").text(data.msg);
 
             }
+            //提示框显示
             $("#hintModal").modal("show");
             setTimeout(function () {
                 $("#hintModal").modal("hide");
+                //重载当前页面
                 location.reload();
             }, 2000);
 

@@ -1,4 +1,4 @@
-package com.rt.newcoder.entity;
+package com.rt.nowcoder.entity;
 
 import java.util.Date;
 

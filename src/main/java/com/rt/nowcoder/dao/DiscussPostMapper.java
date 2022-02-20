@@ -1,7 +1,7 @@
-package com.rt.newcoder.dao;
+package com.rt.nowcoder.dao;
 
 
-import com.rt.newcoder.entity.DiscussPost;
+import com.rt.nowcoder.entity.DiscussPost;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -23,4 +23,12 @@ public interface DiscussPostMapper {
      * @return
      */
     int selectDiscussPostRows(@Param("userId") int userId);
+
+    int insertDiscussPost(DiscussPost discussPost);
+
+    //查询帖子详情
+    DiscussPost selectDiscussPostById(int id);
+
+    //增加帖子评论数量
+    int updateCommentCount(int id, int commentCount);
 }

@@ -1,4 +1,4 @@
-package com.rt.newcoder.entity;
+package com.rt.nowcoder.entity;
 
 public class Page {
     //当前页码
@@ -7,7 +7,7 @@ public class Page {
     private int limit = 10 ;
     //数据总数
     private int rows;
-    //查询路径 （用于复用分页连接）
+    //查询路径 （用于复用分页连接）  在模板上getpath/page的参数  controller能够处理这些
     private String path;
 
     public int getCurrent() {
