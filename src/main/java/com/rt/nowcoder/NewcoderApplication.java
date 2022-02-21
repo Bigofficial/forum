@@ -10,6 +10,7 @@ public class NewcoderApplication {
         SpringApplication.run(NewcoderApplication.class, args);
         //test
         //asdasdasdasdwqeqweqwtqwrqw
+        //asdasdasd
     }
 
 }
