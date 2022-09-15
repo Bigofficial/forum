@@ -15,7 +15,7 @@ import java.util.logging.SimpleFormatter;
 
 @SpringBootTest
 
-class NewcoderApplicationTests implements ApplicationContextAware {
+class ForumApplicationTests implements ApplicationContextAware {
 
 
     @Autowired
